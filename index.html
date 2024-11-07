@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div><h1>Shop</h1></div>
+      <div class="cart-container">
+        <i class="fa-solid fa-cart-shopping" id="cart-icon"></i><span id="cart-count">0</span>
+      </div>
+    </div>
+    <div class="items">
+      <div class="product">
+        <img src="iphone1.jpeg" alt="Apple iPhone 15" width="100">
+        <b>Apple iPhone 15 (Pink, 128 GB)</b><br><br>
+        <span>Price: ₹57,999</span><br><br>
+        <button onclick="addToCart('Apple iPhone 15 (Pink, 128 GB)', 57999, 'iphone1.jpeg')">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="iphone2.jpeg" alt="Apple iPhone 15" width="100">
+        <b>Apple iPhone 15 (Black, 64 GB)</b><br><br>
+        <span>Price: ₹47,999</span><br><br>
+        <button onclick="addToCart('Apple iPhone 15 (Black, 64 GB)', 47999, 'iphone2.jpeg')">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="iphone3.jpeg" alt="Apple iPhone 15" width="100">
+        <b>Apple iPhone 15 (Green, 320 GB)</b><br><br>
+        <span>Price: ₹67,999</span><br><br>
+        <button onclick="addToCart('Apple iPhone 15 (Green, 320 GB)', 67999, 'iphone3.jpeg')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-popup" id="cart-popup">
+    <div class="cart-header">Your Cart</div>
+    <div class="cart-items" id="cart-items">
+    	<div>
+		  <span><strong>${item.name}</strong></span>
+		  <span>₹${item.price}</span>
+		</div>
+    </div>
+    <div class="cart-footer">
+      <div>Total: ₹<span id="total-price">0</span></div>
+      <button onclick="clearCart()">Buy Now</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
